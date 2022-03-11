@@ -1,0 +1,30 @@
+﻿@page "/"
+@inherits PlayerListBase
+
+<h3>Players</h3>
+
+@if(Players == null)
+{
+    <div class="spinner"></div>   
+}
+else
+{
+    <div class="card-deck">
+        @foreach (var players in Players)
+        {
+            <div class="card m-3" style="min-width: 18rem; max-width:30.5%;">
+                <div class="card-header">
+                    <h3>@players.FirstName @players.LastName</h3>
+                </div>
+                <img class="card-img-top imageThumbnail" src="@players.PhotoPath" />
+                <div class="card-footer text-center">
+                    <a href="@($"playerdetails/{players.Id}")" class="btn btn-primary m-1">View</a>
+
+                    <a href="@($"editplayer/{players.Id}")" class="btn btn-primary m-1">Edit</a>
+
+                </div>
+            </div>
+        }
+    </div>
+}
+
