@@ -2,3 +2,9 @@ The application has Clean Architecture. It consists of three projects. Logic is 
 <br/>
 <br/>
 The application calls the data from the database and displays it in the browser. It is possible to manipulate this data by pressing the appropriate buttons, which have the ability to change the data in the database. 
+<br/>
+<br/>
+REST web service is implemented. 
+<br/>
+<br/>
+The user interface is enabled using Swagger.
